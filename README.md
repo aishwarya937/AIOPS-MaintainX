@@ -1,19 +1,17 @@
-# AIOPS-MaintainX
+# AIOPS-MaintainX 🏭🤖
 
-## Project Overview
-AI-Driven Industrial Machine Breakdown Prediction & Automated Maintenance Workflow System.
+**AI-Driven Industrial Breakdown Prediction & Automated Maintenance System**
 
-## Goals
-1. **Ingest**: Collect IoT sensor data from machines.
-2. **Predict**: Use LSTM/RF models to predict failures.
-3. **Act**: Auto-assign maintenance tickets to technicians.
+## 📖 Overview
+AIOPS-MaintainX is an end-to-end system that uses Deep Learning (LSTM) to predict machine failures in real-time and automatically assigns maintenance tickets to technicians.
 
-## Tech Stack
-- **Language**: Python (AI/Backend), Node.js (Frontend)
-- **AI**: Scikit-learn, TensorFlow/PyTorch
-- **Database**: PostgreSQL, MongoDB
-- **Infrastructure**: Docker, Kafka
+## 🏗 Architecture
+*   **IoT Simulator:** Python Edge Client (MQTT)
+*   **Backend:** FastAPI (Python)
+*   **Frontend:** React.js
+*   **Database:** PostgreSQL
+*   **AI Engine:** Scikit-Learn & PyTorch/Keras
 
-## Status
-- [ ] Week 1: Setup
-- [ ] Week 2: Architecture
+## 🚀 Status
+Current Phase: **Week 1 - Project Setup**
+Branch: `dev`
