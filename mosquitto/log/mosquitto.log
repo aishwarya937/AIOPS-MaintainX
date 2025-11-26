@@ -54,3 +54,28 @@
 1764092753: Opening ipv4 listen socket on port 1883.
 1764092753: Opening ipv6 listen socket on port 1883.
 1764092753: mosquitto version 2.0.22 running
+1764127967: mosquitto version 2.0.22 starting
+1764127967: Config loaded from /mosquitto/config/mosquitto.conf.
+1764127967: Opening ipv4 listen socket on port 1883.
+1764127967: Opening ipv6 listen socket on port 1883.
+1764127967: mosquitto version 2.0.22 running
+1764128217: New connection from 172.19.0.1:37590 on port 1883.
+1764128217: New client connected from 172.19.0.1:37590 as auto-1D390562-B334-DD93-DFD8-E99F22E9D928 (p2, c1, k60).
+1764128319: New connection from 172.19.0.1:52556 on port 1883.
+1764128319: New client connected from 172.19.0.1:52556 as auto-68B11AAA-5B01-ED57-9777-F75192B70009 (p2, c1, k60).
+1764128445: Client auto-1D390562-B334-DD93-DFD8-E99F22E9D928 closed its connection.
+1764128450: Client auto-68B11AAA-5B01-ED57-9777-F75192B70009 disconnected.
+1764129768: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764129991: New connection from 172.19.0.1:45714 on port 1883.
+1764129991: New client connected from 172.19.0.1:45714 as auto-A158BB65-A9C4-D3DE-B5B8-9C17A21720C2 (p2, c1, k60).
+1764130002: New connection from 172.19.0.1:43514 on port 1883.
+1764130002: New client connected from 172.19.0.1:43514 as auto-0CF92637-ED51-1E6B-6DF9-3624949356B4 (p2, c1, k60).
+1764130030: Client auto-A158BB65-A9C4-D3DE-B5B8-9C17A21720C2 closed its connection.
+1764130034: Client auto-0CF92637-ED51-1E6B-6DF9-3624949356B4 disconnected.
+1764131797: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1764132004: New connection from 172.19.0.1:47250 on port 1883.
+1764132004: New client connected from 172.19.0.1:47250 as auto-56EDD595-1AE1-3F2D-8784-3DBE26B72D6E (p2, c1, k60).
+1764132021: New connection from 172.19.0.1:44042 on port 1883.
+1764132021: New client connected from 172.19.0.1:44042 as auto-C62ABE7E-5851-37FD-C552-616B2A74DB83 (p2, c1, k60).
+1764132099: Client auto-C62ABE7E-5851-37FD-C552-616B2A74DB83 closed its connection.
+1764132104: Client auto-56EDD595-1AE1-3F2D-8784-3DBE26B72D6E disconnected.
