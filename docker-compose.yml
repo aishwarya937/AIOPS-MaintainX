@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # 1. The Database (PostgreSQL)
+  # 1. Database (PostgreSQL) - User & Metadata Storage
   db:
     image: postgres:15
     container_name: maintainx_db
@@ -10,23 +10,64 @@ services:
       POSTGRES_PASSWORD: password123
       POSTGRES_DB: maintainx
     ports:
-      - "5433:5432"
+      - "5433:5432" # External Port 5433 to avoid conflicts
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - maintainx_net
     restart: always
 
-  # 2. The Message Broker (Mosquitto MQTT)
+  # 2. Message Broker (MQTT) - IoT Transport
   mqtt:
     image: eclipse-mosquitto:2
     container_name: maintainx_mqtt
     ports:
-      - "1883:1883"  # MQTT Port
-      - "9001:9001"  # WebSockets Port
+      - "1883:1883"
+      - "9001:9001"
     volumes:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+    networks:
+      - maintainx_net
     restart: always
 
+  # 3. Data Lake (MinIO) - Raw Data Storage (S3 Compatible)
+  minio:
+    image: minio/minio
+    container_name: maintainx_datalake
+    ports:
+      - "9000:9000" # API Port
+      - "9090:9090" # Console Port
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9090"
+    volumes:
+      - minio_data:/data
+    networks:
+      - maintainx_net
+    restart: always
+
+  # 4. Feature Store (Redis) - Real-time Caching
+  redis:
+    image: redis:7
+    container_name: maintainx_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - maintainx_net
+    restart: always
+
+# Shared Network so services can talk to each other
+networks:
+  maintainx_net:
+    driver: bridge
+
+# Persistent Volumes
 volumes:
   postgres_data:
+  minio_data:
+  redis_data:

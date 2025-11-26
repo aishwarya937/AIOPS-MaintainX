@@ -27,3 +27,4 @@ def check_db():
 
 if __name__ == "__main__":
     check_db()
+    

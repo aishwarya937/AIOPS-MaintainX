@@ -20,3 +20,6 @@ joblib
 # Testing
 pytest
 httpx
+
+minio
+redis
